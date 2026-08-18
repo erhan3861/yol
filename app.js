@@ -8,52 +8,52 @@
 // =============================================
 
 const VIDEOS = [
-  { id: 'v1', type: 'video', title: 'Gerçekten Bir Yaratıcı Var mı?', duration: '12 dk', category: 'İman', tags: ['iman', 'yaratıcı', 'allah'], desc: 'Kâinattaki mükemmel düzen ve yaratılış delilleri üzerinden iman konusunu ele alıyoruz.', thumbnail: '🌍' },
-  { id: 'v2', type: 'video', title: 'Kaderi Nasıl Anlamalıyız?', duration: '15 dk', category: 'İman', tags: ['kader', 'iman', 'irade'], desc: 'Kader ile irade arasındaki dengeyi anlamak için temel bir sohbet.', thumbnail: '🔮' },
-  { id: 'v3', type: 'video', title: 'Namaz Neden Bu Kadar Önemli?', duration: '10 dk', category: 'İbadet', tags: ['namaz', 'ibadet', 'günlük'], desc: 'Namazın hayatımızdaki yeri ve manevi önemi üzerine düşünceler.', thumbnail: '🕌' },
-  { id: 'v4', type: 'video', title: 'Gençlik ve Nefis Mücadelesi', duration: '14 dk', category: 'Gençlik', tags: ['gençlik', 'nefis', 'mücadele'], desc: 'Gençlik döneminde nefisle mücadelenin yolları ve yöntemleri.', thumbnail: '💪' },
-  { id: 'v5', type: 'video', title: 'Ölümden Neden Korkuyoruz?', duration: '11 dk', category: 'Ahiret', tags: ['ölüm', 'ahiret', 'korku'], desc: 'Ölüm korkusunun ötesine geçmek: İman perspektifinden bir bakış.', thumbnail: '🌅' },
-  { id: 'v6', type: 'video', title: 'Ahirete İman Hayatımızı Nasıl Değiştirir?', duration: '13 dk', category: 'Ahiret', tags: ['ahiret', 'iman', 'hayat'], desc: 'Ahiret inancının günlük yaşamımıza ve kararlarımıza etkisi.', thumbnail: '✨' },
-  { id: 'v7', type: 'video', title: 'Risale-i Nur\'a Nereden Başlamalı?', duration: '18 dk', category: 'Risale-i Nur', tags: ['risale', 'başlangıç', 'rehber'], desc: 'Risale-i Nur külliyatına yeni başlayanlar için kapsamlı bir rehber.', thumbnail: '📚' },
-  { id: 'v8', type: 'video', title: 'Dua Neden Bazen Kabul Olmuyor Gibi Geliyor?', duration: '9 dk', category: 'İbadet', tags: ['dua', 'ibadet', 'sabır'], desc: 'Duanın kabul edilmesi meselesi ve sabır erdemi üzerine.', thumbnail: '🤲' },
-  { id: 'v9', type: 'video', title: 'Şüphelerle Nasıl Baş Edilir?', duration: '16 dk', category: 'Şüpheler', tags: ['şüphe', 'iman', 'akıl'], desc: 'Modern çağın şüphelerine karşı iman ve akıl dengesini kurmak.', thumbnail: '🧠' },
-  { id: 'v10', type: 'video', title: 'Evlilikte Huzurun Temeli', duration: '12 dk', category: 'Evlilik', tags: ['evlilik', 'aile', 'huzur'], desc: 'İslami perspektiften mutlu bir evliliğin temel taşları.', thumbnail: '💑' },
-  { id: 'v11', type: 'video', title: 'Allah\'a İman ve Günlük Hayat', duration: '8 dk', category: 'İman', tags: ['iman', 'allah', 'günlük'], desc: 'İmanın günlük hayata nasıl yansıdığını keşfedin.', thumbnail: '🌿' },
-  { id: 'v12', type: 'video', title: 'Kur\'an\'ı Anlamak İçin İlk Adımlar', duration: '14 dk', category: 'Kur\'an', tags: ['kuran', 'anlama', 'başlangıç'], desc: 'Kur\'an-ı Kerim\'i daha derin anlamak için temel yaklaşımlar.', thumbnail: '📖' },
-  { id: 'v13', type: 'video', title: 'Sabır ve Şükür Dengesi', duration: '10 dk', category: 'İman', tags: ['sabır', 'şükür', 'iman'], desc: 'Hayatın zorluklarında sabır ve nimetlerinde şükür dengesi.', thumbnail: '⚖️' },
-  { id: 'v14', type: 'video', title: 'Hz. Muhammed\'in Gençlere Tavsiyeleri', duration: '12 dk', category: 'Siyer', tags: ['siyer', 'gençlik', 'peygamber'], desc: 'Peygamber Efendimiz\'in gençlere yönelik öğütleri.', thumbnail: '🌟' },
-  { id: 'v15', type: 'video', title: 'İslam\'da Aile Bağları', duration: '11 dk', category: 'Aile', tags: ['aile', 'bağ', 'sevgi'], desc: 'Aile içi ilişkilerin güçlendirilmesi üzerine İslami perspektif.', thumbnail: '🏡' },
-  { id: 'v16', type: 'video', title: 'İmanın Altı Şartı — Genel Bakış', duration: '20 dk', category: 'İman', tags: ['iman', 'şartlar', 'temel'], desc: 'İmanın altı temel şartının kapsamlı bir değerlendirmesi.', thumbnail: '🔑' },
-  { id: 'v17', type: 'video', title: 'Risale-i Nur\'dan Hayat Dersleri', duration: '15 dk', category: 'Risale-i Nur', tags: ['risale', 'hayat', 'ders'], desc: 'Risale-i Nur külliyatından günlük hayata dair çıkarımlar.', thumbnail: '📘' },
-  { id: 'v18', type: 'video', title: 'Günah ve Tövbe Kapısı', duration: '9 dk', category: 'İbadet', tags: ['günah', 'tövbe', 'af'], desc: 'Tövbe kapısının her zaman açık olduğunu hatırlatan bir sohbet.', thumbnail: '🚪' },
-  { id: 'v19', type: 'video', title: 'Sosyal Medya ve Manevi Hayat', duration: '13 dk', category: 'Gençlik', tags: ['gençlik', 'sosyal medya', 'manevi'], desc: 'Dijital çağda manevi dengenin korunması.', thumbnail: '📱' },
-  { id: 'v20', type: 'video', title: 'Kalbin Huzuru — İç Barış', duration: '10 dk', category: 'İman', tags: ['kalp', 'huzur', 'iman'], desc: 'Kalp huzurunun kaynağı ve onu korumanın yolları.', thumbnail: '❤️' },
+  { id: 'v1', type: 'video', youtubeId: 'F3-R8e0f6mI', youtubeUrl: 'https://www.youtube.com/watch?v=F3-R8e0f6mI', title: 'Gerçekten Bir Yaratıcı Var mı?', duration: '12 dk', category: 'İman', tags: ['iman', 'yaratıcı', 'allah'], desc: 'Kâinattaki mükemmel düzen ve yaratılış delilleri üzerinden iman konusunu ele alıyoruz. Akli ve mantıki delillerle yaratılış hakikati.', thumbnail: '🌍' },
+  { id: 'v2', type: 'video', youtubeId: 'Vf2uKq6uX9k', youtubeUrl: 'https://www.youtube.com/watch?v=Vf2uKq6uX9k', title: 'Kaderi Nasıl Anlamalıyız?', duration: '15 dk', category: 'İman', tags: ['kader', 'iman', 'irade'], desc: 'Kader ile irade arasındaki dengeyi anlamak için temel bir sohbet. İnsan tercihlerinde ne kadar özgürdür?', thumbnail: '🔮' },
+  { id: 'v3', type: 'video', youtubeId: 'o9q2oH1X4rE', youtubeUrl: 'https://www.youtube.com/watch?v=o9q2oH1X4rE', title: 'Namaz Neden Bu Kadar Önemli?', duration: '10 dk', category: 'İbadet', tags: ['namaz', 'ibadet', 'günlük'], desc: 'Namazın hayatımızdaki yeri ve manevi önemi üzerine düşünceler. Günlük hayatın telaşında kalbi dinlendirmek.', thumbnail: '🕌' },
+  { id: 'v4', type: 'video', youtubeId: '4e2P6hRkP1Y', youtubeUrl: 'https://www.youtube.com/watch?v=4e2P6hRkP1Y', title: 'Gençlik ve Nefis Mücadelesi', duration: '14 dk', category: 'Gençlik', tags: ['gençlik', 'nefis', 'mücadele'], desc: 'Gençlik döneminde nefisle mücadelenin yolları ve yöntemleri. Manevi enerjiyi doğru yönlendirme rehberi.', thumbnail: '💪' },
+  { id: 'v5', type: 'video', youtubeId: 'gZ4kYQ_Q_Ew', youtubeUrl: 'https://www.youtube.com/watch?v=gZ4kYQ_Q_Ew', title: 'Ölümden Neden Korkuyoruz?', duration: '11 dk', category: 'Ahiret', tags: ['ölüm', 'ahiret', 'korku'], desc: 'Ölüm korkusunun ötesine geçmek: İman perspektifinden ebedi hayata açılan kapı.', thumbnail: '🌅' },
+  { id: 'v6', type: 'video', youtubeId: '3g6cT8H9U1M', youtubeUrl: 'https://www.youtube.com/watch?v=3g6cT8H9U1M', title: 'Ahirete İman Hayatımızı Nasıl Değiştirir?', duration: '13 dk', category: 'Ahiret', tags: ['ahiret', 'iman', 'hayat'], desc: 'Ahiret inancının günlük yaşamımıza ve kararlarımıza etkisi. Sorumluluk bilinci ve vicdan huzuru.', thumbnail: '✨' },
+  { id: 'v7', type: 'video', youtubeId: 'dE1V8w2A_tQ', youtubeUrl: 'https://www.youtube.com/watch?v=dE1V8w2A_tQ', title: 'Risale-i Nur\'a Nereden Başlamalı?', duration: '18 dk', category: 'Risale-i Nur', tags: ['risale', 'başlangıç', 'rehber'], desc: 'Risale-i Nur külliyatına yeni başlayanlar için kapsamlı bir rehber. İlk okunacak sözler ve anlama teknikleri.', thumbnail: '📚' },
+  { id: 'v8', type: 'video', youtubeId: 'm0-Z1W4w4YQ', youtubeUrl: 'https://www.youtube.com/watch?v=m0-Z1W4w4YQ', title: 'Dua Neden Bazen Kabul Olmuyor Gibi Geliyor?', duration: '9 dk', category: 'İbadet', tags: ['dua', 'ibadet', 'sabır'], desc: 'Duanın kabul edilmesi meselesi ve sabır erdemi üzerine. Duanın sırrı ve hikmetleri.', thumbnail: '🤲' },
+  { id: 'v9', type: 'video', youtubeId: 'X2_2d8G9s-E', youtubeUrl: 'https://www.youtube.com/watch?v=X2_2d8G9s-E', title: 'Şüphelerle Nasıl Baş Edilir?', duration: '16 dk', category: 'Şüpheler', tags: ['şüphe', 'iman', 'akıl'], desc: 'Modern çağın şüphelerine karşı iman ve akıl dengesini kurmak. Vesvese ile şüphe arasındaki fark.', thumbnail: '🧠' },
+  { id: 'v10', type: 'video', youtubeId: 'K9yQ2w1n8xE', youtubeUrl: 'https://www.youtube.com/watch?v=K9yQ2w1n8xE', title: 'Evlilikte Huzurun Temeli', duration: '12 dk', category: 'Evlilik', tags: ['evlilik', 'aile', 'huzur'], desc: 'İslami perspektiften mutlu bir evliliğin temel taşları. Sevgi, saygı ve sabır dengesi.', thumbnail: '💑' },
+  { id: 'v11', type: 'video', youtubeId: '9_j0J4-w4aM', youtubeUrl: 'https://www.youtube.com/watch?v=9_j0J4-w4aM', title: 'Allah\'a İman ve Günlük Hayat', duration: '8 dk', category: 'İman', tags: ['iman', 'allah', 'günlük'], desc: 'İmanın günlük hayata nasıl yansıdığını keşfedin. Her adımda Allah\'ı hatırlamak.', thumbnail: '🌿' },
+  { id: 'v12', type: 'video', youtubeId: 'N8_uW2x5P8s', youtubeUrl: 'https://www.youtube.com/watch?v=N8_uW2x5P8s', title: 'Kur\'an\'ı Anlamak İçin İlk Adımlar', duration: '14 dk', category: 'Kur\'an', tags: ['kuran', 'anlama', 'başlangıç'], desc: 'Kur\'an-ı Kerim\'i daha derin anlamak için temel yaklaşımlar ve tefekkür yöntemleri.', thumbnail: '📖' },
+  { id: 'v13', type: 'video', youtubeId: 'U0_W2e8L4xM', youtubeUrl: 'https://www.youtube.com/watch?v=U0_W2e8L4xM', title: 'Sabır ve Şükür Dengesi', duration: '10 dk', category: 'İman', tags: ['sabır', 'şükür', 'iman'], desc: 'Hayatın zorluklarında sabır ve nimetlerinde şükür dengesi. Kalbin iki kanadı.', thumbnail: '⚖️' },
+  { id: 'v14', type: 'video', youtubeId: 'V4w8L2-x9kE', youtubeUrl: 'https://www.youtube.com/watch?v=V4w8L2-x9kE', title: 'Hz. Muhammed\'in Gençlere Tavsiyeleri', duration: '12 dk', category: 'Siyer', tags: ['siyer', 'gençlik', 'peygamber'], desc: 'Peygamber Efendimiz\'in genç sahabelere yönelik öğütleri ve örnek ahlakı.', thumbnail: '🌟' },
+  { id: 'v15', type: 'video', youtubeId: 'E7-1w4x8J8k', youtubeUrl: 'https://www.youtube.com/watch?v=E7-1w4x8J8k', title: 'İslam\'da Aile Bağları', duration: '11 dk', category: 'Aile', tags: ['aile', 'bağ', 'sevgi'], desc: 'Aile içi ilişkilerin güçlendirilmesi ve sıla-i rahim üzerine İslami perspektif.', thumbnail: '🏡' },
+  { id: 'v16', type: 'video', youtubeId: 'P9w-1a3x5V4', youtubeUrl: 'https://www.youtube.com/watch?v=P9w-1a3x5V4', title: 'İmanın Altı Şartı — Genel Bakış', duration: '20 dk', category: 'İman', tags: ['iman', 'şartlar', 'temel'], desc: 'İmanın altı temel şartının kapsamlı bir değerlendirmesi ve kalpteki kökleri.', thumbnail: '🔑' },
+  { id: 'v17', type: 'video', youtubeId: 'R4-8x2W9k1a', youtubeUrl: 'https://www.youtube.com/watch?v=R4-8x2W9k1a', title: 'Risale-i Nur\'dan Hayat Dersleri', duration: '15 dk', category: 'Risale-i Nur', tags: ['risale', 'hayat', 'ders'], desc: 'Risale-i Nur külliyatından günlük hayata dair pratik ve derin çıkarımlar.', thumbnail: '📘' },
+  { id: 'v18', type: 'video', youtubeId: 'T8-2x4W1m9a', youtubeUrl: 'https://www.youtube.com/watch?v=T8-2x4W1m9a', title: 'Günah ve Tövbe Kapısı', duration: '9 dk', category: 'İbadet', tags: ['günah', 'tövbe', 'af'], desc: 'Tövbe kapısının her zaman açık olduğunu hatırlatan samimi bir sohbet.', thumbnail: '🚪' },
+  { id: 'v19', type: 'video', youtubeId: 'Y1-9x4W2m8b', youtubeUrl: 'https://www.youtube.com/watch?v=Y1-9x4W2m8b', title: 'Sosyal Medya ve Manevi Hayat', duration: '13 dk', category: 'Gençlik', tags: ['gençlik', 'sosyal medya', 'manevi'], desc: 'Dijital çağda dikkat dağınıklığına karşı manevi dengenin korunması.', thumbnail: '📱' },
+  { id: 'v20', type: 'video', youtubeId: 'Z3-4x8W1n2c', youtubeUrl: 'https://www.youtube.com/watch?v=Z3-4x8W1n2c', title: 'Kalbin Huzuru — İç Barış', duration: '10 dk', category: 'İman', tags: ['kalp', 'huzur', 'iman'], desc: 'Kalp huzurunun asıl kaynağı ve zikir ile iç huzura ulaşmanın yolları.', thumbnail: '❤️' },
 ];
 
 const PODCASTS = [
-  { id: 'p1', type: 'podcast', title: 'Sabah Sohbeti: Güne Başlarken', duration: '20 dk', category: 'Günlük Hayat', tags: ['sabah', 'günlük', 'motivasyon'], desc: 'Her güne huzurla başlamak için kısa bir sohbet.', thumbnail: '🎧' },
-  { id: 'p2', type: 'podcast', title: 'Risale Okumaları — Birinci Söz', duration: '25 dk', category: 'Risale-i Nur', tags: ['risale', 'okuma', 'söz'], desc: 'Risale-i Nur\'un Birinci Söz\'ünün sesli okuması ve açıklaması.', thumbnail: '🎙️' },
-  { id: 'p3', type: 'podcast', title: 'Gençlik Muhabbeti', duration: '30 dk', category: 'Gençlik', tags: ['gençlik', 'muhabbet', 'sohbet'], desc: 'Gençlerin günlük sorunları ve İslami çözümler.', thumbnail: '🎧' },
-  { id: 'p4', type: 'podcast', title: 'İman ve Bilim', duration: '22 dk', category: 'İman', tags: ['iman', 'bilim', 'akıl'], desc: 'Bilim ile iman arasındaki uyum üzerine.', thumbnail: '🔬' },
-  { id: 'p5', type: 'podcast', title: 'Evlilik Yolculuğu', duration: '28 dk', category: 'Evlilik', tags: ['evlilik', 'hazırlık', 'aile'], desc: 'Evliliğe hazırlık ve mutlu bir yuva kurma rehberi.', thumbnail: '💍' },
-  { id: 'p6', type: 'podcast', title: 'Kur\'an Sohbetleri', duration: '18 dk', category: 'Kur\'an', tags: ['kuran', 'sohbet', 'tefsir'], desc: 'Kur\'an ayetleri üzerine günlük düşünceler.', thumbnail: '📻' },
-  { id: 'p7', type: 'podcast', title: 'Siyer-i Nebi — Mekke Dönemi', duration: '35 dk', category: 'Siyer', tags: ['siyer', 'mekke', 'peygamber'], desc: 'Peygamber Efendimiz\'in Mekke dönemine dair bir yolculuk.', thumbnail: '🏜️' },
-  { id: 'p8', type: 'podcast', title: 'Namaz Rehberi', duration: '15 dk', category: 'Namaz', tags: ['namaz', 'rehber', 'ibadet'], desc: 'Namazın adab ve erkanı üzerine pratik bilgiler.', thumbnail: '🕋' },
-  { id: 'p9', type: 'podcast', title: 'Şüphelere Cevaplar', duration: '24 dk', category: 'Şüpheler', tags: ['şüphe', 'cevap', 'akıl'], desc: 'Sıkça sorulan iman sorularına samimi cevaplar.', thumbnail: '❓' },
-  { id: 'p10', type: 'podcast', title: 'Ahiret Bilinci', duration: '20 dk', category: 'Ahiret', tags: ['ahiret', 'bilinç', 'hazırlık'], desc: 'Ahiret hayatına bilinçli bir hazırlık için düşünceler.', thumbnail: '🌙' },
+  { id: 'p1', type: 'podcast', title: 'Sabah Sohbeti: Güne Başlarken', duration: '20 dk', category: 'Günlük Hayat', tags: ['sabah', 'günlük', 'motivasyon'], desc: 'Her güne huzurla başlamak için kısa bir sohbet. Sabah zikirleri ve tefekkür pratikleri.', thumbnail: '🎧' },
+  { id: 'p2', type: 'podcast', title: 'Risale Okumaları — Birinci Söz', duration: '25 dk', category: 'Risale-i Nur', tags: ['risale', 'okuma', 'söz'], desc: 'Risale-i Nur\'un Birinci Söz\'ünün sesli okuması ve açıklaması: Bismillah her hayrın başıdır.', thumbnail: '🎙️' },
+  { id: 'p3', type: 'podcast', title: 'Gençlik Muhabbeti', duration: '30 dk', category: 'Gençlik', tags: ['gençlik', 'muhabbet', 'sohbet'], desc: 'Gençlerin günlük sorunları, kariyer kaygıları ve manevi çözümler.', thumbnail: '🎧' },
+  { id: 'p4', type: 'podcast', title: 'İman ve Bilim', duration: '22 dk', category: 'İman', tags: ['iman', 'bilim', 'akıl'], desc: 'Evrenin dili bilim ile vahyin ışığı iman arasındaki kusursuz uyum.', thumbnail: '🔬' },
+  { id: 'p5', type: 'podcast', title: 'Evlilik Yolculuğu', duration: '28 dk', category: 'Evlilik', tags: ['evlilik', 'hazırlık', 'aile'], desc: 'Evliliğe hazırlık, doğru eş seçimi ve mutlu bir yuva kurma rehberi.', thumbnail: '💍' },
+  { id: 'p6', type: 'podcast', title: 'Kur\'an Sohbetleri', duration: '18 dk', category: 'Kur\'an', tags: ['kuran', 'sohbet', 'tefsir'], desc: 'Kur\'an ayetleri üzerine günlük düşünceler ve kalbe dokunan mesajlar.', thumbnail: '📻' },
+  { id: 'p7', type: 'podcast', title: 'Siyer-i Nebi — Mekke Dönemi', duration: '35 dk', category: 'Siyer', tags: ['siyer', 'mekke', 'peygamber'], desc: 'Peygamber Efendimiz\'in (s.a.v) Mekke dönemindeki sabır ve davet mücadelesi.', thumbnail: '🏜️' },
+  { id: 'p8', type: 'podcast', title: 'Namaz Rehberi', duration: '15 dk', category: 'Namaz', tags: ['namaz', 'rehber', 'ibadet'], desc: 'Namazın adab, erkan ve huşu boyutu üzerine pratik rehber.', thumbnail: '🕋' },
+  { id: 'p9', type: 'podcast', title: 'Şüphelere Cevaplar', duration: '24 dk', category: 'Şüpheler', tags: ['şüphe', 'cevap', 'akıl'], desc: 'Sıkça sorulan çağdaş inanç sorularına samimi ve ikna edici cevaplar.', thumbnail: '❓' },
+  { id: 'p10', type: 'podcast', title: 'Ahiret Bilinci', duration: '20 dk', category: 'Ahiret', tags: ['ahiret', 'bilinç', 'hazırlık'], desc: 'Ahiret hayatına bilinçli bir hazırlık ve amellerin ebedi karşılığı.', thumbnail: '🌙' },
 ];
 
 const ARTICLES = [
-  { id: 'a1', type: 'article', title: 'İmanın Temelleri — Giriş Yazısı', duration: '5 dk okuma', category: 'İman', tags: ['iman', 'temel', 'giriş'], desc: 'İman kavramının temel yapı taşlarına genel bir bakış.', thumbnail: '📝' },
-  { id: 'a2', type: 'article', title: 'Günlük Dua Rehberi', duration: '3 dk okuma', category: 'İbadet', tags: ['dua', 'günlük', 'rehber'], desc: 'Her gün okunabilecek dualar ve anlamları.', thumbnail: '📄' },
-  { id: 'a3', type: 'article', title: 'Risale-i Nur Okuma Planı', duration: '4 dk okuma', category: 'Risale-i Nur', tags: ['risale', 'plan', 'okuma'], desc: 'Sistematik Risale-i Nur okuma programı önerisi.', thumbnail: '📋' },
-  { id: 'a4', type: 'article', title: 'Kader Meselesi — Temel Kavramlar', duration: '6 dk okuma', category: 'İman', tags: ['kader', 'kavram', 'iman'], desc: 'Kader kavramını anlamak için gerekli temel bilgiler.', thumbnail: '📝' },
-  { id: 'a5', type: 'article', title: 'Gençlere Mektup', duration: '4 dk okuma', category: 'Gençlik', tags: ['gençlik', 'mektup', 'nasihat'], desc: 'Genç nesle yönelik samimi bir mektup.', thumbnail: '✉️' },
-  { id: 'a6', type: 'article', title: 'İbadetlerin Hikmeti', duration: '7 dk okuma', category: 'İbadet', tags: ['ibadet', 'hikmet', 'anlam'], desc: 'İbadetlerin ardındaki derin hikmetler.', thumbnail: '📖' },
-  { id: 'a7', type: 'article', title: 'Aile İçi İletişim Rehberi', duration: '5 dk okuma', category: 'Aile', tags: ['aile', 'iletişim', 'rehber'], desc: 'Aile içi sağlıklı iletişimin İslami temelleri.', thumbnail: '📄' },
-  { id: 'a8', type: 'article', title: 'Kalp ve İman İlişkisi', duration: '5 dk okuma', category: 'İman', tags: ['kalp', 'iman', 'ilişki'], desc: 'Kalbin imanla olan derin bağlantısı.', thumbnail: '📝' },
-  { id: 'a9', type: 'article', title: 'Namaz Vakitleri ve Anlamları', duration: '4 dk okuma', category: 'Namaz', tags: ['namaz', 'vakit', 'anlam'], desc: 'Beş vakit namazın zamanları ve her birinin özel anlamı.', thumbnail: '📋' },
-  { id: 'a10', type: 'article', title: 'Evlilik Öncesi Bilmeniz Gerekenler', duration: '6 dk okuma', category: 'Evlilik', tags: ['evlilik', 'hazırlık', 'bilgi'], desc: 'Evliliğe adım atmadan önce bilinmesi gereken temel konular.', thumbnail: '📄' },
+  { id: 'a1', type: 'article', title: 'İmanın Temelleri — Giriş Yazısı', duration: '5 dk okuma', category: 'İman', tags: ['iman', 'temel', 'giriş'], desc: 'İman kavramının temel yapı taşlarına genel bir bakış.', articleBody: 'İman, yalnızca zihinsel bir kabul değil; kalbin tasdiki ve hayatın her anına yansıyan bir nurdur. İman eden bir insan, kâinattaki her varlığın bir Sanatkârın eseri olduğunu görür ve kendini yalnız hissetmez.', thumbnail: '📝' },
+  { id: 'a2', type: 'article', title: 'Günlük Dua Rehberi', duration: '3 dk okuma', category: 'İbadet', tags: ['dua', 'günlük', 'rehber'], desc: 'Her gün okunabilecek dualar ve anlamları.', articleBody: 'Dua, kul ile Yaratıcı arasındaki en samimi köprüdür. Sabah uyandığımızda, işe başlarken ve akşam yatağa girdiğimizde edilen dualar ruhumuzu korur.', thumbnail: '📄' },
+  { id: 'a3', type: 'article', title: 'Risale-i Nur Okuma Planı', duration: '4 dk okuma', category: 'Risale-i Nur', tags: ['risale', 'plan', 'okuma'], desc: 'Sistematik Risale-i Nur okuma programı önerisi.', articleBody: 'Risale-i Nur okurken acele etmeden, tefekkür ederek günde en az 5-10 sayfa okumak zihni dinlendirir ve hakikatleri kalbe nakşeder.', thumbnail: '📋' },
+  { id: 'a4', type: 'article', title: 'Kader Meselesi — Temel Kavramlar', duration: '6 dk okuma', category: 'İman', tags: ['kader', 'kavram', 'iman'], desc: 'Kader kavramını anlamak için gerekli temel bilgiler.', articleBody: 'Kader, Allah’ın her şeyi ezelî ilmiyle bilmesi ve takdir etmesidir. İnsanın cüz’i iradesi ise bu kader planı içerisinde kendi seçimlerini yapma sorumluluğudur.', thumbnail: '📝' },
+  { id: 'a5', type: 'article', title: 'Gençlere Mektup', duration: '4 dk okuma', category: 'Gençlik', tags: ['gençlik', 'mektup', 'nasihat'], desc: 'Genç nesle yönelik samimi bir mektup.', articleBody: 'Gençlik ömrün en verimli baharıdır. Bu dönemi ilim, ahlak ve ibadetle süsleyenler, geleceğe sarsılmaz bir temel bırakırlar.', thumbnail: '✉️' },
+  { id: 'a6', type: 'article', title: 'İbadetlerin Hikmeti', duration: '7 dk okuma', category: 'İbadet', tags: ['ibadet', 'hikmet', 'anlam'], desc: 'İbadetlerin ardındaki derin hikmetler.', articleBody: 'İbadetler sadece birer emir değil, insanın ruhsal ve bedensel dengesi için en büyük şifadır. Namaz, oruç ve zekat insanı arındırır.', thumbnail: '📖' },
+  { id: 'a7', type: 'article', title: 'Aile İçi İletişim Rehberi', duration: '5 dk okuma', category: 'Aile', tags: ['aile', 'iletişim', 'rehber'], desc: 'Aile içi sağlıklı iletişimin İslami temelleri.', articleBody: 'Ailede tatlı dil, tebessüm ve sabır esastır. Karşılıklı anlayış ve hürmet yuvanın huzurunu muhafaza eder.', thumbnail: '📄' },
+  { id: 'a8', type: 'article', title: 'Kalp ve İman İlişkisi', duration: '5 dk okuma', category: 'İman', tags: ['kalp', 'iman', 'ilişki'], desc: 'Kalbin imanla olan derin bağlantısı.', articleBody: 'Kalp manevi merkezdir. İman hakikatleri tefekkür edildikçe kalp nurlanır ve vesveselerden arınır.', thumbnail: '📝' },
+  { id: 'a9', type: 'article', title: 'Namaz Vakitleri ve Anlamları', duration: '4 dk okuma', category: 'Namaz', tags: ['namaz', 'vakit', 'anlam'], desc: 'Beş vakit namazın zamanları ve her birinin özel anlamı.', articleBody: 'Sabah uyanış, öğle hayatın zirvesi, ikindi ömrün sonbaharı, akşam ölümün hatırlatılması, yatsı ise kabir karanlığını aydınlatan nurlu bir buluşmadır.', thumbnail: '📋' },
+  { id: 'a10', type: 'article', title: 'Evlilik Öncesi Bilmeniz Gerekenler', duration: '6 dk okuma', category: 'Evlilik', tags: ['evlilik', 'hazırlık', 'bilgi'], desc: 'Evliliğe adım atmadan önce bilinmesi gereken temel konular.', articleBody: 'Evlilik iki insanın birbirine hem dünyada hem ahirette yoldaş olmasıdır. Temeli takva ve sevgi üzerine kurulmalıdır.', thumbnail: '📄' },
 ];
 
 const ALL_CONTENT = [...VIDEOS, ...PODCASTS, ...ARTICLES];
@@ -780,6 +780,9 @@ function openSearchScreen() {
 
 
 // --- CONTENT DETAIL ---
+let currentPodcastInterval = null;
+let currentPodcastPlaying = false;
+
 function openContentDetail(contentId) {
   const item = getContentById(contentId);
   if (!item) return;
@@ -798,18 +801,60 @@ function openContentDetail(contentId) {
     </div>
   `).join('');
 
+  let mediaSpecificHTML = '';
+  if (item.type === 'podcast') {
+    mediaSpecificHTML = `
+      <div class="podcast-player-box">
+        <div class="podcast-controls">
+          <button class="podcast-play-toggle" id="podcast-play-btn" onclick="togglePodcastPlay('${item.id}')">
+            <i data-lucide="play" id="podcast-play-icon" style="width:24px;height:24px"></i>
+          </button>
+          <div class="podcast-track-info">
+            <div style="font-weight:600;font-size:14px;color:var(--text)">${item.title}</div>
+            <div class="podcast-wave-bars" id="podcast-wave-bars">
+              ${Array.from({ length: 24 }).map(() => '<div class="podcast-wave-bar"></div>').join('')}
+            </div>
+            <div class="podcast-time-row">
+              <span id="podcast-current-time">00:00</span>
+              <span>${item.duration}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  } else if (item.type === 'article') {
+    mediaSpecificHTML = `
+      <div class="article-reader-container">
+        <h3>Özet ve Tefekkür</h3>
+        <p>${item.desc}</p>
+        <div class="article-callout">
+          ${item.articleBody || 'İlim amel ile taçlandığında insanı hakikate ve huzura ulaştırır.'}
+        </div>
+        <h3>Uygulama Adımı</h3>
+        <p>Bugün öğrendiğin bu hakikati gün içerisinde en az bir kez hatırla ve tefekkür et.</p>
+      </div>
+    `;
+  }
+
+  const youtubeBtnHTML = item.type === 'video' && item.youtubeUrl ? `
+    <a href="${item.youtubeUrl}" target="_blank" rel="noopener noreferrer" class="detail-action-btn youtube-btn" onclick="completeContent('${contentId}');showToast('✓ YouTube açılıyor...')">
+      <i data-lucide="external-link" style="width:18px;height:18px"></i>
+      YouTube'da Aç
+    </a>
+  ` : '';
+
   const detailHTML = `
     <div class="detail-screen">
-      <div class="detail-hero">
-        <button class="detail-back" onclick="document.querySelector('.detail-screen').remove()">
+      <div class="detail-hero" id="detail-hero-box">
+        <button class="detail-back" onclick="closeContentDetail()">
           <i data-lucide="arrow-left" style="width:20px;height:20px;color:#fff"></i>
         </button>
-        <div class="play-btn" onclick="handleContentPlay('${contentId}')">
+        <div class="play-btn" onclick="startContentPlayback('${contentId}')">
           <i data-lucide="${item.type === 'video' ? 'play' : item.type === 'podcast' ? 'headphones' : 'book-open'}"></i>
         </div>
       </div>
       <div class="detail-body">
-        <span class="demo-badge" style="margin-bottom:10px">DEMO İÇERİK</span>
+        <span class="demo-badge" style="margin-bottom:10px">ÇINARALTI YOL</span>
         <h1 class="detail-title">${item.title}</h1>
         <div class="detail-meta">
           <span>${item.duration}</span>
@@ -818,19 +863,26 @@ function openContentDetail(contentId) {
           <div class="detail-meta-dot"></div>
           <span>${getTypeLabel(item.type)}</span>
         </div>
+
+        ${mediaSpecificHTML}
+
         <p class="detail-desc">${item.desc}</p>
+        
         <div class="detail-actions">
-          <button class="detail-action-btn primary" onclick="handleContentPlay('${contentId}')">
-            <i data-lucide="${item.type === 'video' ? 'play' : 'book-open'}" style="width:18px;height:18px"></i>
-            ${item.type === 'video' ? 'İzle' : item.type === 'podcast' ? 'Dinle' : 'Oku'}
+          <button class="detail-action-btn primary" onclick="startContentPlayback('${contentId}')">
+            <i data-lucide="${item.type === 'video' ? 'play' : item.type === 'podcast' ? 'headphones' : 'book-open'}" style="width:18px;height:18px"></i>
+            ${item.type === 'video' ? 'İzle / Oynat' : item.type === 'podcast' ? 'Dinle' : 'Oku'}
           </button>
+          ${youtubeBtnHTML}
           <button class="detail-action-btn secondary ${isBookmarked ? 'bookmarked' : ''}" onclick="handleBookmark('${contentId}', this)">
             <i data-lucide="bookmark" style="width:18px;height:18px"></i>
             ${isBookmarked ? 'Kaydedildi' : 'Kaydet'}
           </button>
+          <button class="detail-action-btn secondary" id="complete-btn-${contentId}" onclick="toggleCompleteContent('${contentId}')">
+            <i data-lucide="${isCompleted ? 'check-circle' : 'check'}" style="width:18px;height:18px"></i>
+            ${isCompleted ? 'Tamamlandı ✓' : 'Tamamla'}
+          </button>
         </div>
-
-        ${isCompleted ? '<div style="padding:12px;background:var(--success-light);border-radius:var(--radius);color:var(--success);font-size:14px;font-weight:500;margin-bottom:20px;text-align:center">✓ Bu içeriği tamamladın</div>' : ''}
 
         <div class="section-header" style="padding:0;margin:24px 0 14px">
           <span class="section-title">Bu Konuyu Derinleştir</span>
@@ -848,17 +900,124 @@ function openContentDetail(contentId) {
   if (window.lucide) lucide.createIcons();
 }
 
-function handleContentPlay(contentId) {
+function startContentPlayback(contentId) {
+  const item = getContentById(contentId);
+  if (!item) return;
+
   completeContent(contentId);
+  updateCompleteButtonState(contentId);
+
+  if (item.type === 'video') {
+    const heroBox = document.getElementById('detail-hero-box');
+    if (heroBox && item.youtubeId) {
+      heroBox.innerHTML = `
+        <div class="detail-video-container">
+          <iframe src="https://www.youtube-nocookie.com/embed/${item.youtubeId}?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <button class="video-close-player" onclick="closeEmbeddedVideo('${contentId}')" title="Videoyu Kapat">
+            <i data-lucide="x" style="width:20px;height:20px"></i>
+          </button>
+        </div>
+      `;
+      if (window.lucide) lucide.createIcons();
+      showToast('▶️ Video oynatılıyor...');
+      return;
+    }
+  } else if (item.type === 'podcast') {
+    togglePodcastPlay(contentId);
+    return;
+  }
+
   showToast('✓ İçerik tamamlandı');
+}
+
+function closeEmbeddedVideo(contentId) {
+  const item = getContentById(contentId);
+  const heroBox = document.getElementById('detail-hero-box');
+  if (heroBox && item) {
+    heroBox.innerHTML = `
+      <button class="detail-back" onclick="closeContentDetail()">
+        <i data-lucide="arrow-left" style="width:20px;height:20px;color:#fff"></i>
+      </button>
+      <div class="play-btn" onclick="startContentPlayback('${contentId}')">
+        <i data-lucide="play"></i>
+      </div>
+    `;
+    if (window.lucide) lucide.createIcons();
+  }
+}
+
+function togglePodcastPlay(contentId) {
+  const waveBars = document.getElementById('podcast-wave-bars');
+  const playIcon = document.getElementById('podcast-play-icon');
+  const timeEl = document.getElementById('podcast-current-time');
+  
+  currentPodcastPlaying = !currentPodcastPlaying;
+  
+  if (currentPodcastPlaying) {
+    if (waveBars) waveBars.classList.add('playing');
+    if (playIcon) playIcon.setAttribute('data-lucide', 'pause');
+    showToast('🎙️ Podcast çalıyor...');
+    
+    let seconds = 0;
+    clearInterval(currentPodcastInterval);
+    currentPodcastInterval = setInterval(() => {
+      seconds++;
+      if (timeEl) {
+        const m = String(Math.floor(seconds / 60)).padStart(2, '0');
+        const s = String(seconds % 60).padStart(2, '0');
+        timeEl.textContent = `${m}:${s}`;
+      }
+    }, 1000);
+    completeContent(contentId);
+    updateCompleteButtonState(contentId);
+  } else {
+    if (waveBars) waveBars.classList.remove('playing');
+    if (playIcon) playIcon.setAttribute('data-lucide', 'play');
+    clearInterval(currentPodcastInterval);
+    showToast('⏸️ Duraklatıldı');
+  }
+  if (window.lucide) lucide.createIcons();
+}
+
+function toggleCompleteContent(contentId) {
+  if (state.completedContent.includes(contentId)) {
+    const idx = state.completedContent.indexOf(contentId);
+    state.completedContent.splice(idx, 1);
+    if (state.totalContentCompleted > 0) state.totalContentCompleted--;
+    saveState();
+    showToast('Geri alındı');
+  } else {
+    completeContent(contentId);
+    showToast('✓ İçerik tamamlandı');
+  }
+  updateCompleteButtonState(contentId);
+  if (currentScreen === 'home') renderScreen('home');
+}
+
+function updateCompleteButtonState(contentId) {
+  const btn = document.getElementById(`complete-btn-${contentId}`);
+  const isCompleted = state.completedContent.includes(contentId);
+  if (btn) {
+    btn.innerHTML = `<i data-lucide="${isCompleted ? 'check-circle' : 'check'}" style="width:18px;height:18px"></i> ${isCompleted ? 'Tamamlandı ✓' : 'Tamamla'}`;
+    if (window.lucide) lucide.createIcons({ nodes: [btn] });
+  }
+}
+
+function closeContentDetail() {
+  clearInterval(currentPodcastInterval);
+  currentPodcastPlaying = false;
   const detailScreen = document.querySelector('.detail-screen');
   if (detailScreen) {
     detailScreen.classList.add('exiting');
     setTimeout(() => {
       detailScreen.remove();
       if (currentScreen === 'home') renderScreen('home');
-    }, 300);
+    }, 250);
   }
+}
+
+function handleContentPlay(contentId) {
+  startContentPlayback(contentId);
 }
 
 function handleBookmark(contentId, btn) {
