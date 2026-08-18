@@ -8,26 +8,26 @@
 // =============================================
 
 const VIDEOS = [
-  { id: 'v1', type: 'video', youtubeId: 'F3-R8e0f6mI', youtubeUrl: 'https://www.youtube.com/watch?v=F3-R8e0f6mI', title: 'Gerçekten Bir Yaratıcı Var mı?', duration: '12 dk', category: 'İman', tags: ['iman', 'yaratıcı', 'allah'], desc: 'Kâinattaki mükemmel düzen ve yaratılış delilleri üzerinden iman konusunu ele alıyoruz. Akli ve mantıki delillerle yaratılış hakikati.', thumbnail: '🌍' },
-  { id: 'v2', type: 'video', youtubeId: 'Vf2uKq6uX9k', youtubeUrl: 'https://www.youtube.com/watch?v=Vf2uKq6uX9k', title: 'Kaderi Nasıl Anlamalıyız?', duration: '15 dk', category: 'İman', tags: ['kader', 'iman', 'irade'], desc: 'Kader ile irade arasındaki dengeyi anlamak için temel bir sohbet. İnsan tercihlerinde ne kadar özgürdür?', thumbnail: '🔮' },
-  { id: 'v3', type: 'video', youtubeId: 'o9q2oH1X4rE', youtubeUrl: 'https://www.youtube.com/watch?v=o9q2oH1X4rE', title: 'Namaz Neden Bu Kadar Önemli?', duration: '10 dk', category: 'İbadet', tags: ['namaz', 'ibadet', 'günlük'], desc: 'Namazın hayatımızdaki yeri ve manevi önemi üzerine düşünceler. Günlük hayatın telaşında kalbi dinlendirmek.', thumbnail: '🕌' },
-  { id: 'v4', type: 'video', youtubeId: '4e2P6hRkP1Y', youtubeUrl: 'https://www.youtube.com/watch?v=4e2P6hRkP1Y', title: 'Gençlik ve Nefis Mücadelesi', duration: '14 dk', category: 'Gençlik', tags: ['gençlik', 'nefis', 'mücadele'], desc: 'Gençlik döneminde nefisle mücadelenin yolları ve yöntemleri. Manevi enerjiyi doğru yönlendirme rehberi.', thumbnail: '💪' },
-  { id: 'v5', type: 'video', youtubeId: 'gZ4kYQ_Q_Ew', youtubeUrl: 'https://www.youtube.com/watch?v=gZ4kYQ_Q_Ew', title: 'Ölümden Neden Korkuyoruz?', duration: '11 dk', category: 'Ahiret', tags: ['ölüm', 'ahiret', 'korku'], desc: 'Ölüm korkusunun ötesine geçmek: İman perspektifinden ebedi hayata açılan kapı.', thumbnail: '🌅' },
-  { id: 'v6', type: 'video', youtubeId: '3g6cT8H9U1M', youtubeUrl: 'https://www.youtube.com/watch?v=3g6cT8H9U1M', title: 'Ahirete İman Hayatımızı Nasıl Değiştirir?', duration: '13 dk', category: 'Ahiret', tags: ['ahiret', 'iman', 'hayat'], desc: 'Ahiret inancının günlük yaşamımıza ve kararlarımıza etkisi. Sorumluluk bilinci ve vicdan huzuru.', thumbnail: '✨' },
-  { id: 'v7', type: 'video', youtubeId: 'dE1V8w2A_tQ', youtubeUrl: 'https://www.youtube.com/watch?v=dE1V8w2A_tQ', title: 'Risale-i Nur\'a Nereden Başlamalı?', duration: '18 dk', category: 'Risale-i Nur', tags: ['risale', 'başlangıç', 'rehber'], desc: 'Risale-i Nur külliyatına yeni başlayanlar için kapsamlı bir rehber. İlk okunacak sözler ve anlama teknikleri.', thumbnail: '📚' },
-  { id: 'v8', type: 'video', youtubeId: 'm0-Z1W4w4YQ', youtubeUrl: 'https://www.youtube.com/watch?v=m0-Z1W4w4YQ', title: 'Dua Neden Bazen Kabul Olmuyor Gibi Geliyor?', duration: '9 dk', category: 'İbadet', tags: ['dua', 'ibadet', 'sabır'], desc: 'Duanın kabul edilmesi meselesi ve sabır erdemi üzerine. Duanın sırrı ve hikmetleri.', thumbnail: '🤲' },
-  { id: 'v9', type: 'video', youtubeId: 'X2_2d8G9s-E', youtubeUrl: 'https://www.youtube.com/watch?v=X2_2d8G9s-E', title: 'Şüphelerle Nasıl Baş Edilir?', duration: '16 dk', category: 'Şüpheler', tags: ['şüphe', 'iman', 'akıl'], desc: 'Modern çağın şüphelerine karşı iman ve akıl dengesini kurmak. Vesvese ile şüphe arasındaki fark.', thumbnail: '🧠' },
-  { id: 'v10', type: 'video', youtubeId: 'K9yQ2w1n8xE', youtubeUrl: 'https://www.youtube.com/watch?v=K9yQ2w1n8xE', title: 'Evlilikte Huzurun Temeli', duration: '12 dk', category: 'Evlilik', tags: ['evlilik', 'aile', 'huzur'], desc: 'İslami perspektiften mutlu bir evliliğin temel taşları. Sevgi, saygı ve sabır dengesi.', thumbnail: '💑' },
-  { id: 'v11', type: 'video', youtubeId: '9_j0J4-w4aM', youtubeUrl: 'https://www.youtube.com/watch?v=9_j0J4-w4aM', title: 'Allah\'a İman ve Günlük Hayat', duration: '8 dk', category: 'İman', tags: ['iman', 'allah', 'günlük'], desc: 'İmanın günlük hayata nasıl yansıdığını keşfedin. Her adımda Allah\'ı hatırlamak.', thumbnail: '🌿' },
-  { id: 'v12', type: 'video', youtubeId: 'N8_uW2x5P8s', youtubeUrl: 'https://www.youtube.com/watch?v=N8_uW2x5P8s', title: 'Kur\'an\'ı Anlamak İçin İlk Adımlar', duration: '14 dk', category: 'Kur\'an', tags: ['kuran', 'anlama', 'başlangıç'], desc: 'Kur\'an-ı Kerim\'i daha derin anlamak için temel yaklaşımlar ve tefekkür yöntemleri.', thumbnail: '📖' },
-  { id: 'v13', type: 'video', youtubeId: 'U0_W2e8L4xM', youtubeUrl: 'https://www.youtube.com/watch?v=U0_W2e8L4xM', title: 'Sabır ve Şükür Dengesi', duration: '10 dk', category: 'İman', tags: ['sabır', 'şükür', 'iman'], desc: 'Hayatın zorluklarında sabır ve nimetlerinde şükür dengesi. Kalbin iki kanadı.', thumbnail: '⚖️' },
-  { id: 'v14', type: 'video', youtubeId: 'V4w8L2-x9kE', youtubeUrl: 'https://www.youtube.com/watch?v=V4w8L2-x9kE', title: 'Hz. Muhammed\'in Gençlere Tavsiyeleri', duration: '12 dk', category: 'Siyer', tags: ['siyer', 'gençlik', 'peygamber'], desc: 'Peygamber Efendimiz\'in genç sahabelere yönelik öğütleri ve örnek ahlakı.', thumbnail: '🌟' },
-  { id: 'v15', type: 'video', youtubeId: 'E7-1w4x8J8k', youtubeUrl: 'https://www.youtube.com/watch?v=E7-1w4x8J8k', title: 'İslam\'da Aile Bağları', duration: '11 dk', category: 'Aile', tags: ['aile', 'bağ', 'sevgi'], desc: 'Aile içi ilişkilerin güçlendirilmesi ve sıla-i rahim üzerine İslami perspektif.', thumbnail: '🏡' },
-  { id: 'v16', type: 'video', youtubeId: 'P9w-1a3x5V4', youtubeUrl: 'https://www.youtube.com/watch?v=P9w-1a3x5V4', title: 'İmanın Altı Şartı — Genel Bakış', duration: '20 dk', category: 'İman', tags: ['iman', 'şartlar', 'temel'], desc: 'İmanın altı temel şartının kapsamlı bir değerlendirmesi ve kalpteki kökleri.', thumbnail: '🔑' },
-  { id: 'v17', type: 'video', youtubeId: 'R4-8x2W9k1a', youtubeUrl: 'https://www.youtube.com/watch?v=R4-8x2W9k1a', title: 'Risale-i Nur\'dan Hayat Dersleri', duration: '15 dk', category: 'Risale-i Nur', tags: ['risale', 'hayat', 'ders'], desc: 'Risale-i Nur külliyatından günlük hayata dair pratik ve derin çıkarımlar.', thumbnail: '📘' },
-  { id: 'v18', type: 'video', youtubeId: 'T8-2x4W1m9a', youtubeUrl: 'https://www.youtube.com/watch?v=T8-2x4W1m9a', title: 'Günah ve Tövbe Kapısı', duration: '9 dk', category: 'İbadet', tags: ['günah', 'tövbe', 'af'], desc: 'Tövbe kapısının her zaman açık olduğunu hatırlatan samimi bir sohbet.', thumbnail: '🚪' },
-  { id: 'v19', type: 'video', youtubeId: 'Y1-9x4W2m8b', youtubeUrl: 'https://www.youtube.com/watch?v=Y1-9x4W2m8b', title: 'Sosyal Medya ve Manevi Hayat', duration: '13 dk', category: 'Gençlik', tags: ['gençlik', 'sosyal medya', 'manevi'], desc: 'Dijital çağda dikkat dağınıklığına karşı manevi dengenin korunması.', thumbnail: '📱' },
-  { id: 'v20', type: 'video', youtubeId: 'Z3-4x8W1n2c', youtubeUrl: 'https://www.youtube.com/watch?v=Z3-4x8W1n2c', title: 'Kalbin Huzuru — İç Barış', duration: '10 dk', category: 'İman', tags: ['kalp', 'huzur', 'iman'], desc: 'Kalp huzurunun asıl kaynağı ve zikir ile iç huzura ulaşmanın yolları.', thumbnail: '❤️' },
+  { id: 'v1', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Gerçekten Bir Yaratıcı Var mı?', duration: '12 dk', category: 'İman', tags: ['iman', 'yaratıcı', 'allah'], desc: 'Kâinattaki mükemmel düzen ve yaratılış delilleri üzerinden iman konusunu ele alıyoruz. Akli ve mantıki delillerle yaratılış hakikati.', thumbnail: '🌍' },
+  { id: 'v2', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Kaderi Nasıl Anlamalıyız?', duration: '15 dk', category: 'İman', tags: ['kader', 'iman', 'irade'], desc: 'Kader ile irade arasındaki dengeyi anlamak için temel bir sohbet. İnsan tercihlerinde ne kadar özgürdür?', thumbnail: '🔮' },
+  { id: 'v3', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Namaz Neden Bu Kadar Önemli?', duration: '10 dk', category: 'İbadet', tags: ['namaz', 'ibadet', 'günlük'], desc: 'Namazın hayatımızdaki yeri ve manevi önemi üzerine düşünceler. Günlük hayatın telaşında kalbi dinlendirmek.', thumbnail: '🕌' },
+  { id: 'v4', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Gençlik ve Nefis Mücadelesi', duration: '14 dk', category: 'Gençlik', tags: ['gençlik', 'nefis', 'mücadele'], desc: 'Gençlik döneminde nefisle mücadelenin yolları ve yöntemleri. Manevi enerjiyi doğru yönlendirme rehberi.', thumbnail: '💪' },
+  { id: 'v5', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Ölümden Neden Korkuyoruz?', duration: '11 dk', category: 'Ahiret', tags: ['ölüm', 'ahiret', 'korku'], desc: 'Ölüm korkusunun ötesine geçmek: İman perspektifinden ebedi hayata açılan kapı.', thumbnail: '🌅' },
+  { id: 'v6', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Ahirete İman Hayatımızı Nasıl Değiştirir?', duration: '13 dk', category: 'Ahiret', tags: ['ahiret', 'iman', 'hayat'], desc: 'Ahiret inancının günlük yaşamımıza ve kararlarımıza etkisi. Sorumluluk bilinci ve vicdan huzuru.', thumbnail: '✨' },
+  { id: 'v7', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Risale-i Nur\'a Nereden Başlamalı?', duration: '18 dk', category: 'Risale-i Nur', tags: ['risale', 'başlangıç', 'rehber'], desc: 'Risale-i Nur külliyatına yeni başlayanlar için kapsamlı bir rehber. İlk okunacak sözler ve anlama teknikleri.', thumbnail: '📚' },
+  { id: 'v8', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Dua Neden Bazen Kabul Olmuyor Gibi Geliyor?', duration: '9 dk', category: 'İbadet', tags: ['dua', 'ibadet', 'sabır'], desc: 'Duanın kabul edilmesi meselesi ve sabır erdemi üzerine. Duanın sırrı ve hikmetleri.', thumbnail: '🤲' },
+  { id: 'v9', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Şüphelerle Nasıl Baş Edilir?', duration: '16 dk', category: 'Şüpheler', tags: ['şüphe', 'iman', 'akıl'], desc: 'Modern çağın şüphelerine karşı iman ve akıl dengesini kurmak. Vesvese ile şüphe arasındaki fark.', thumbnail: '🧠' },
+  { id: 'v10', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Evlilikte Huzurun Temeli', duration: '12 dk', category: 'Evlilik', tags: ['evlilik', 'aile', 'huzur'], desc: 'İslami perspektiften mutlu bir evliliğin temel taşları. Sevgi, saygı ve sabır dengesi.', thumbnail: '💑' },
+  { id: 'v11', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Allah\'a İman ve Günlük Hayat', duration: '8 dk', category: 'İman', tags: ['iman', 'allah', 'günlük'], desc: 'İmanın günlük hayata nasıl yansıdığını keşfedin. Her adımda Allah\'ı hatırlamak.', thumbnail: '🌿' },
+  { id: 'v12', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Kur\'an\'ı Anlamak İçin İlk Adımlar', duration: '14 dk', category: 'Kur\'an', tags: ['kuran', 'anlama', 'başlangıç'], desc: 'Kur\'an-ı Kerim\'i daha derin anlamak için temel yaklaşımlar ve tefekkür yöntemleri.', thumbnail: '📖' },
+  { id: 'v13', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Sabır ve Şükür Dengesi', duration: '10 dk', category: 'İman', tags: ['sabır', 'şükür', 'iman'], desc: 'Hayatın zorluklarında sabır ve nimetlerinde şükür dengesi. Kalbin iki kanadı.', thumbnail: '⚖️' },
+  { id: 'v14', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Hz. Muhammed\'in Gençlere Tavsiyeleri', duration: '12 dk', category: 'Siyer', tags: ['siyer', 'gençlik', 'peygamber'], desc: 'Peygamber Efendimiz\'in genç sahabelere yönelik öğütleri ve örnek ahlakı.', thumbnail: '🌟' },
+  { id: 'v15', type: 'video', youtubeId: '0m0mGaxImcY', title: 'İslam\'da Aile Bağları', duration: '11 dk', category: 'Aile', tags: ['aile', 'bağ', 'sevgi'], desc: 'Aile içi ilişkilerin güçlendirilmesi ve sıla-i rahim üzerine İslami perspektif.', thumbnail: '🏡' },
+  { id: 'v16', type: 'video', youtubeId: '0m0mGaxImcY', title: 'İmanın Altı Şartı — Genel Bakış', duration: '20 dk', category: 'İman', tags: ['iman', 'şartlar', 'temel'], desc: 'İmanın altı temel şartının kapsamlı bir değerlendirmesi ve kalpteki kökleri.', thumbnail: '🔑' },
+  { id: 'v17', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Risale-i Nur\'dan Hayat Dersleri', duration: '15 dk', category: 'Risale-i Nur', tags: ['risale', 'hayat', 'ders'], desc: 'Risale-i Nur külliyatından günlük hayata dair pratik ve derin çıkarımlar.', thumbnail: '📘' },
+  { id: 'v18', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Günah ve Tövbe Kapısı', duration: '9 dk', category: 'İbadet', tags: ['günah', 'tövbe', 'af'], desc: 'Tövbe kapısının her zaman açık olduğunu hatırlatan samimi bir sohbet.', thumbnail: '🚪' },
+  { id: 'v19', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Sosyal Medya ve Manevi Hayat', duration: '13 dk', category: 'Gençlik', tags: ['gençlik', 'sosyal medya', 'manevi'], desc: 'Dijital çağda dikkat dağınıklığına karşı manevi dengenin korunması.', thumbnail: '📱' },
+  { id: 'v20', type: 'video', youtubeId: '0m0mGaxImcY', title: 'Kalbin Huzuru — İç Barış', duration: '10 dk', category: 'İman', tags: ['kalp', 'huzur', 'iman'], desc: 'Kalp huzurunun asıl kaynağı ve zikir ile iç huzura ulaşmanın yolları.', thumbnail: '❤️' },
 ];
 
 const PODCASTS = [
@@ -836,8 +836,9 @@ function openContentDetail(contentId) {
     `;
   }
 
-  const youtubeBtnHTML = item.type === 'video' && item.youtubeUrl ? `
-    <a href="${item.youtubeUrl}" target="_blank" rel="noopener noreferrer" class="detail-action-btn youtube-btn" onclick="completeContent('${contentId}');showToast('✓ YouTube açılıyor...')">
+  const youtubeSearchUrl = `https://www.youtube.com/results?search_query=cinaralti+${encodeURIComponent(item.title)}`;
+  const youtubeBtnHTML = item.type === 'video' ? `
+    <a href="${youtubeSearchUrl}" target="_blank" rel="noopener noreferrer" class="detail-action-btn youtube-btn" onclick="completeContent('${contentId}');showToast('✓ YouTube açılıyor...')">
       <i data-lucide="external-link" style="width:18px;height:18px"></i>
       YouTube'da Aç
     </a>
@@ -909,17 +910,28 @@ function startContentPlayback(contentId) {
 
   if (item.type === 'video') {
     const heroBox = document.getElementById('detail-hero-box');
-    if (heroBox && item.youtubeId) {
+    const ytUrl = `https://www.youtube.com/results?search_query=cinaralti+${encodeURIComponent(item.title)}`;
+    if (heroBox) {
       heroBox.innerHTML = `
-        <div class="detail-video-container">
-          <iframe src="https://www.youtube-nocookie.com/embed/${item.youtubeId}?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <button class="video-close-player" onclick="closeEmbeddedVideo('${contentId}')" title="Videoyu Kapat">
-            <i data-lucide="x" style="width:20px;height:20px"></i>
+        <div class="video-fallback-box">
+          <div style="font-size:32px;margin-bottom:6px">🎬</div>
+          <h4 style="font-size:14px;line-height:1.3;margin-bottom:6px">${item.title}</h4>
+          <p style="font-size:11px;line-height:1.4;margin-bottom:12px">${item.desc}</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
+            <a href="${ytUrl}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding:8px 16px;min-height:auto;font-size:13px;background:#FF0000;border-radius:10px">
+              <i data-lucide="external-link" style="width:15px;height:15px"></i> YouTube'da İzle
+            </a>
+            <button class="btn-secondary" style="padding:8px 12px;min-height:auto;font-size:13px;background:rgba(255,255,255,0.15);color:#fff;border-color:rgba(255,255,255,0.3);border-radius:10px" onclick="closeEmbeddedVideo('${contentId}')">
+              Geri
+            </button>
+          </div>
+          <button class="video-close-player" onclick="closeEmbeddedVideo('${contentId}')" title="Kapat">
+            <i data-lucide="x" style="width:16px;height:16px"></i>
           </button>
         </div>
       `;
       if (window.lucide) lucide.createIcons();
-      showToast('▶️ Video oynatılıyor...');
+      showToast('▶️ Video hazırlandı');
       return;
     }
   } else if (item.type === 'podcast') {
@@ -1432,9 +1444,9 @@ function renderProfile(container) {
     { icon: 'bookmark', label: 'Kaydettiklerim', action: 'showBookmarks()' },
     { icon: 'check-circle', label: 'Tamamladıklarım', action: 'showCompleted()' },
     { icon: 'trophy', label: 'Başarılarım', action: 'showAchievements()' },
-    { icon: 'target', label: 'Hedeflerim', action: 'showToast("Hedefler yakında!")' },
-    { icon: 'bell', label: 'Bildirimler', action: 'showToast("Bildirim ayarları yakında!")' },
-    { icon: 'settings', label: 'Ayarlar', action: 'showToast("Ayarlar yakında!")' },
+    { icon: 'target', label: 'Hedeflerim', action: 'showGoals()' },
+    { icon: 'bell', label: 'Bildirimler', action: 'showNotifications()' },
+    { icon: 'settings', label: 'Ayarlar', action: 'showSettings()' },
   ];
 
   container.innerHTML = `
@@ -1475,6 +1487,152 @@ function renderProfile(container) {
       `).join('')}
     </div>
   `;
+}
+
+function showGoals() {
+  const currentGoal = state.dailyGoal || 20;
+  openBottomSheet(`
+    <h3 style="font-size:18px;font-weight:700;margin-bottom:6px">Hedeflerim</h3>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:16px">Günlük manevi gelişim ve okuma hedefini belirle.</p>
+    
+    <div style="font-size:14px;font-weight:600;margin-bottom:8px">Günlük Süre Hedefi</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px">
+      ${[10, 20, 30, 45].map(min => `
+        <button class="goal-option ${currentGoal === min ? 'selected' : ''}" style="padding:12px;margin:0" onclick="updateDailyGoal(${min})">
+          <div class="goal-icon" style="width:32px;height:32px;font-size:14px">⏱️</div>
+          <span style="font-size:13px">${min} dakika</span>
+        </button>
+      `).join('')}
+    </div>
+
+    <div class="settings-row">
+      <div>
+        <div class="settings-label">Haftalık İstikrar Hedefi</div>
+        <div class="settings-sub">En az 5 gün uygulamaya giriş yap</div>
+      </div>
+      <span style="font-weight:700;color:var(--secondary)">5 Gün / Hafta</span>
+    </div>
+
+    <button class="btn-primary" style="max-width:none;margin-top:20px" onclick="closeBottomSheet();showToast('✓ Hedeflerin güncellendi')">
+      Kaydet
+    </button>
+  `);
+}
+
+function updateDailyGoal(min) {
+  state.dailyGoal = min;
+  saveState();
+  showToast(`✓ Günlük hedef ${min} dakika olarak ayarlandı`);
+  showGoals();
+}
+
+function showNotifications() {
+  const notifs = state.notifications || { morning: true, evening: true, weekly: true, events: true };
+  openBottomSheet(`
+    <h3 style="font-size:18px;font-weight:700;margin-bottom:6px">Bildirimler</h3>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:16px">Hangi konularda hatırlatma almak istersin?</p>
+
+    <div class="settings-row">
+      <div>
+        <div class="settings-label">Sabah İlhamı & Sohbet</div>
+        <div class="settings-sub">Güne manevi motivasyon ile başla (08:30)</div>
+      </div>
+      <div class="toggle-switch ${notifs.morning ? 'active' : ''}" onclick="toggleNotificationSetting('morning', this)"></div>
+    </div>
+
+    <div class="settings-row">
+      <div>
+        <div class="settings-label">Günün Duası ve Hatırlatıcı</div>
+        <div class="settings-sub">Akşam vaktinde günün duasını hatırla (20:00)</div>
+      </div>
+      <div class="toggle-switch ${notifs.evening ? 'active' : ''}" onclick="toggleNotificationSetting('evening', this)"></div>
+    </div>
+
+    <div class="settings-row">
+      <div>
+        <div class="settings-label">Haftalık Gelişim Raporu</div>
+        <div class="settings-sub">Haftalık tamamladığın içerik ve test özeti</div>
+      </div>
+      <div class="toggle-switch ${notifs.weekly ? 'active' : ''}" onclick="toggleNotificationSetting('weekly', this)"></div>
+    </div>
+
+    <div class="settings-row">
+      <div>
+        <div class="settings-label">Topluluk & Canlı Yayınlar</div>
+        <div class="settings-sub">Çınaraltı buluşmaları ve canlı sohbetler</div>
+      </div>
+      <div class="toggle-switch ${notifs.events ? 'active' : ''}" onclick="toggleNotificationSetting('events', this)"></div>
+    </div>
+
+    <button class="btn-primary" style="max-width:none;margin-top:20px" onclick="closeBottomSheet();showToast('✓ Bildirim tercihleri kaydedildi')">
+      Tamam
+    </button>
+  `);
+}
+
+function toggleNotificationSetting(key, el) {
+  if (!state.notifications) state.notifications = { morning: true, evening: true, weekly: true, events: true };
+  state.notifications[key] = !state.notifications[key];
+  el.classList.toggle('active', state.notifications[key]);
+  saveState();
+  showToast('✓ Ayar güncellendi');
+}
+
+function showSettings() {
+  openBottomSheet(`
+    <h3 style="font-size:18px;font-weight:700;margin-bottom:6px">Ayarlar</h3>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:16px">Uygulama ve hesap tercihleri</p>
+
+    <div style="margin-bottom:14px">
+      <label style="font-size:13px;font-weight:600;display:block;margin-bottom:6px">Kullanıcı Adı</label>
+      <input type="text" id="setting-username" value="${state.userName}" style="width:100%;padding:12px 14px;background:var(--background);border-radius:var(--radius-sm);border:1px solid var(--border);font-size:14px;color:var(--text)">
+    </div>
+
+    <div class="settings-row">
+      <div>
+        <div class="settings-label">Çevrimdışı Modu</div>
+        <div class="settings-sub">Metinleri internetsiz görüntüle</div>
+      </div>
+      <div class="toggle-switch active" onclick="this.classList.toggle('active');showToast('✓ Çevrimdışı modu güncellendi')"></div>
+    </div>
+
+    <div class="settings-row" style="cursor:pointer" onclick="resetAllProgress()">
+      <div>
+        <div class="settings-label" style="color:var(--error)">Verileri Sıfırla</div>
+        <div class="settings-sub">Tüm ilerlemeyi ve kayıtları sıfırla</div>
+      </div>
+      <i data-lucide="trash-2" style="color:var(--error);width:18px;height:18px"></i>
+    </div>
+
+    <div style="text-align:center;font-size:12px;color:var(--text-muted);margin:16px 0 10px">
+      Çınaraltı Yol v1.2.0 • İlimden Hayata
+    </div>
+
+    <button class="btn-primary" style="max-width:none" onclick="saveUserSettings()">
+      Kaydet
+    </button>
+  `);
+}
+
+function saveUserSettings() {
+  const input = document.getElementById('setting-username');
+  if (input && input.value.trim()) {
+    state.userName = input.value.trim();
+    saveState();
+  }
+  closeBottomSheet();
+  showToast('✓ Ayarlar kaydedildi');
+  if (currentScreen === 'profile') renderScreen('profile');
+}
+
+function resetAllProgress() {
+  if (confirm('Tüm ilerlemenizi sıfırlamak istediğinize emin misiniz?')) {
+    state = { ...DEFAULT_STATE };
+    saveState();
+    closeBottomSheet();
+    showToast('✓ Tüm veriler sıfırlandı');
+    renderScreen('home');
+  }
 }
 
 function showBookmarks() {
